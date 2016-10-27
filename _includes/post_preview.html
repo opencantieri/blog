@@ -1,0 +1,29 @@
+<div class="col-sm-3 col-xs-12">
+    <article>
+        <div class="box_text box_article clearfix">
+            <p class="h5">
+                {% assign m = post.date | date: "%-m" %}
+                {{ post.date | date: "%-d" }}
+                {% case m %}
+                {% when '1' %}Gennaio
+                {% when '2' %}Febbraio
+                {% when '3' %}Marzo
+                {% when '4' %}Aprile
+                {% when '5' %}Maggio
+                {% when '6' %}Giugno
+                {% when '7' %}Luglio
+                {% when '8' %}Augosto
+                {% when '9' %}Settembre
+                {% when '10' %}Ottobre
+                {% when '11' %}Novembre
+                {% when '12' %}Dicembre
+                {% endcase %}
+                {{ post.date | date: "%Y" }}
+            </p>
+            <h3 class="h4">
+                <a class="box_text_anchor" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | safe }}</a>
+            </h3>
+            {{ post.excerpt }}
+        </div><!-- /box_text_container -->
+    </article>
+</div>

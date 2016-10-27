@@ -1,0 +1,57 @@
+---
+layout: design.italia
+---
+<div class="row">
+    <div class="col-sm-12">
+        <article id="main" tabindex="0">
+            <p class="h5">
+                {% assign m = page.date | date: "%-m" %}
+                {{ page.date | date: "%-d" }}
+                {% case m %}
+                {% when '1' %}Gennaio
+                {% when '2' %}Febbraio
+                {% when '3' %}Marzo
+                {% when '4' %}Aprile
+                {% when '5' %}Maggio
+                {% when '6' %}Giugno
+                {% when '7' %}Luglio
+                {% when '8' %}Augosto
+                {% when '9' %}Settembre
+                {% when '10' %}Ottobre
+                {% when '11' %}Novembre
+                {% when '12' %}Dicembre
+                {% endcase %}
+                {{ page.date | date: "%Y" }}
+            </p>
+
+            <h2>{{ page.title | safe }}</h2>
+
+            {% if page.postimage %}
+            <img class="img-responsive" src="{{ site.baseurl }}{{page.postimage}}" >
+            {% endif %}
+
+            <div class="entry" align="justify">
+                {{ content | safe }}
+            </div>
+
+            <div class="share_buttons_container text-center">        
+                <div>
+                    <span class="fa fa-share-alt"></span>
+                    <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}" title="Condividi su Facebook">
+                        <span class="fa fa-facebook"></span>
+                    </a>        
+                    <a target="_blank" href="http://www.twitter.com/share?text={{ page.title | safe }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}" title="Condividi su Twitter">
+                        <span class="fa fa-twitter"></span>
+                    </a>        
+                    <a target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ site.baseurl }}{{ page.url }}" title="Condividi su Google Plus">
+                        <span class="fa fa-google-plus"></span>
+                    </a>        
+                    <a target="_blank" class="hidden-lg hidden-md" href="whatsapp://send?text={{ page.title | safe }}%20{{ site.url }}{{ site.baseurl }}{{ page.url }}" data-action="share/whatsapp/share" title="Condividi su Whatsapp" tabindex="-1">
+                        <span class="fa fa-whatsapp" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+            {% include disqus.html %}
+        </article>
+    </div>
+</div>

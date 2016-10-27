@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>-->
+        <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+        {% include meta.html %}
+
+        <!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+        <script type="text/javascript" src="{{ site.baseurl }}/vendor/js/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ site.baseurl }}/vendor/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ site.baseurl }}/vendor/js/prism.js"></script>
+        <script type="text/javascript" src="{{ site.baseurl }}/js/main.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/vendor/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/vendor/css/font-awesome.min.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/vendor/css/prism.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/custom.css" />
+
+        <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+        <link href="//fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300italic,300,400italic,600,600italic,700,700italic,900" rel="stylesheet" type="text/css">
+        <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    </head>
+
+    <body>
+
+        <a href="#page_top" class="sr-only">torna all’inizio del contenuto</a>
+
+
+
+        <div class="skiplink sr-only">
+            <ul>
+                <li><a accesskey="2" href="{{ site.baseurl }}/#main">Vai al Contenuto</a></li>
+                <li><a accesskey="3" href="{{ site.baseurl }}/#menu">Vai alla navigazione del sito (sommario delle linee guida)</a></li>
+                <li><a href="{{ data.config.git.repository }}">Vai al repository GitHub delle Linee Guida</a></li>
+                <!--        <li><a href="#footer">Vai al Footer</a></li>-->
+            </ul>
+        </div>
+
+
+
+        <div class="nav-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4" style="text-align: center">
+                        <p class="h4"><a href="http://governo.it">Governo Italiano</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="page_top">
+
+            {% include header.html %}
+
+
+
+            <!--<div class="row row-offcanvas row-offcanvas-left">-->
+
+            <!--  <a class="lg-github-link btn btn-default" 
+href="{{data.config.git.repository}}">vai su github</a>-->
+
+            <!--<div class="col-md-4 sidebar-offcanvas" id="sidebar">
+{% include navigation.html %}
+</div>-->
+            <!--/.sidebar-offcanvas-->
+
+            {{ content }}
+
+            <!--</div>-->
+
+
+
+
+
+        </div><!-- container -->
+
+        {% include footer.html %}
+        {% include analytics.html %}
+    </body>
+</html>
