@@ -92,5 +92,3 @@ exclude:
   - node_modules
   - package.json
   - Gruntfile.coffee
-include:
-  - .nojekyll
