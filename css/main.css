@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/*!
+ * Agid 
+ * Linee Guida
+ */
+ 
+ /*! 
+ * Google Font Titillium
+ */
+ .fa.fa-pull-left,.fa.pull-left{margin-right:.3em}.fa-fw,.fa-li{text-align:center}.fa,.fa-stack{display:inline-block}.fa,.glyphicon{-moz-osx-font-smoothing:grayscale}.img-responsive,.img-thumbnail,.table,label{max-width:100%}.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.pre-scrollable{max-height:340px}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:200;src:local('Titillium WebThin'),local('TitilliumWeb-Thin'),url(https://fonts.gstatic.com/s/titilliumweb/v4/anMUvcNT0H1YN4FII8wpr3X8wLqJehFHYvczAG3afGw.ttf) format('truetype')}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:300;src:local('Titillium WebLight'),local('TitilliumWeb-Light'),url(https://fonts.gstatic.com/s/titilliumweb/v4/anMUvcNT0H1YN4FII8wpr93Z6MveExszb-iKWJY7ddA.ttf) format('truetype')}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:400;src:local('Titillium Web'),local('TitilliumWeb-Regular'),url(https://fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTcU3KvHLhcNjEHFQzwNtdMQY.ttf) format('truetype')}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:600;src:local('Titillium WebSemiBold'),local('TitilliumWeb-SemiBold'),url(https://fonts.gstatic.com/s/titilliumweb/v4/anMUvcNT0H1YN4FII8wpr4e2tK5W43RXgBRKkM4A5Qg.ttf) format('truetype')}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:700;src:local('Titillium WebBold'),local('TitilliumWeb-Bold'),url(https://fonts.gstatic.com/s/titilliumweb/v4/anMUvcNT0H1YN4FII8wprzsSLeNQG2cy_mKit6iEdYs.ttf) format('truetype')}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:900;src:local('Titillium WebBlack'),local('TitilliumWeb-Black'),url(https://fonts.gstatic.com/s/titilliumweb/v4/anMUvcNT0H1YN4FII8wpr7TM2ub1b0-XAnaFPbg2y34.ttf) format('truetype')}@font-face{font-family:'Titillium Web';font-style:italic;font-weight:200;src:local('Titillium WebThin Italic'),local('TitilliumWeb-ThinItalic'),url(https://fonts.gstatic.com/s/titilliumweb/v4/RZunN20OBmkvrU7sA4GPPjbN8npVg18l9kOXuMWNZJM.ttf) format('truetype')}@font-face{font-family:'Titillium Web';font-style:italic;font-weight:300;src:local('Titillium WebLight Italic'),local('TitilliumWeb-LightItalic'),url(https://fonts.gstatic.com/s/titilliumweb/v4/RZunN20OBmkvrU7sA4GPPhPpE1UvVmSV1Lr9FL5pkyg.ttf) format('truetype')}@font-face{font-family:'Titillium Web';font-style:italic;font-weight:400;src:local('Titillium WebItalic'),local('TitilliumWeb-Italic'),url(https://fonts.gstatic.com/s/titilliumweb/v4/r9OmwyQxrgzUAhaLET_KO33biFuL3q2SDfti1FP8KHU.ttf) format('truetype')}@font-face{font-family:'Titillium Web';font-style:italic;font-weight:600;src:local('Titillium WebSemiBold Italic'),local('TitilliumWeb-SemiBoldItalic'),url(https://fonts.gstatic.com/s/titilliumweb/v4/RZunN20OBmkvrU7sA4GPPqVmZCTV49gQmgPOUhY_xPU.ttf) format('truetype')}@font-face{font-family:'Titillium Web';font-style:italic;font-weight:700;src:local('Titillium WebBold Italic'),local('TitilliumWeb-BoldItalic'),url(https://fonts.gstatic.com/s/titilliumweb/v4/RZunN20OBmkvrU7sA4GPPvAhmxqQ1BKIUahWaanY54Y.ttf) format('truetype')}
+
 /* ------------------------------
  * Colori - classi riutilizzabili
 /* ------------------------------*/
@@ -1814,124 +1824,3 @@ article table {
     word-wrap: break-word;
   }
 }
-/* HEADER */
-/* override agid css */
-.navbar__logo, .footer__logo {
-  width: auto !important;
-  float: none !important;
-}
-
-@media screen and (min-width: 993px) {
-  .navbar--small .navbar__logo {
-    margin-top: 3px !important;
-  }
-
-  .navbar--small .nav_social {
-    display: none;
-  }
-
-  .navbar--small .form-control {
-    height: 30px;
-  }
-}
-.navbar__logo_container {
-  text-align: center !important;
-}
-
-@media (min-width: 768px) {
-  .navbar__logo_container {
-    text-align: left !important;
-  }
-}
-/* end override*/
-/* END HEADER */
-/* MAIN */
-/* override agid css */
-#main {
-  min-height: 0 !important;
-}
-
-/* end override*/
-/* END MAIN */
-/* FOOTER */
-/* override agid css */
-footer .row > div, footer .footer__links {
-  margin-top: 0 !important;
-}
-
-/* end override */
-footer {
-  background-color: #30373d;
-  color: #ffffff;
-  margin-top: 50px;
-}
-
-.logo_wrapper {
-  width: 74px;
-  height: auto;
-  display: block;
-  position: absolute;
-  z-index: 100;
-  top: 5px;
-  left: 0;
-  transition: all 0.3s ease;
-}
-
-.logo_wrapper a {
-  display: block;
-}
-
-.logo_wrapper img {
-  width: 100%;
-  display: block;
-  overflow: hidden;
-  margin: 0 0 0 0;
-  transition: all 0.3s ease;
-}
-
-.logo_text {
-  padding: 0 0 0 100px;
-}
-
-.logo_text h1, .logo_text .h1, .logo_text h2, .logo_text .h2 {
-  font-size: 2em;
-  font-weight: 700;
-  line-height: 45px;
-  color: #ffffff;
-  display: block;
-  margin: 0;
-}
-
-.logo_text h1 span, .logo_text .h1 span, .logo_text h2 span, .logo_text .h2 span {
-  display: block;
-  clear: both;
-}
-
-.title_row {
-  padding-left: 20px;
-}
-
-.footer_container h3 {
-  font-size: 1.33em;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.box_text_footer {
-  border-top: 1px solid #3e484f;
-  padding: 20px 20px 40px 20px;
-  color: #a5abb0;
-  font-size: 0.88em;
-}
-
-.box_text h4 {
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 1.16em;
-}
-
-.box_text_footer p {
-  color: #a5abb0;
-}
-
-/* END FOOTER */

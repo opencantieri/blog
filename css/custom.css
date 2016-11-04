@@ -1,6 +1,6 @@
 body {
   font-family: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
-  font-size: 18px;
+	font-size: 18px;
 }
 h1, .h1 {
   font-size: 5.4rem;
@@ -54,73 +54,100 @@ header{
         text-align: left !important;
     }
 }
+/*
+ *  Menu a comparsa per schermi più piccoli
+ */
+.navbar--small .navbar-toggle {
+    padding-top: 2.3rem !important;
+}
+.navbar-toggle, .navbar-toggle:hover, .navbar-toggle:visited{
+	cursor: pointer;
+    text-decoration: none;
+}
+.navbar-toggle p{
+    display: none !important;
+    font-size: 12px;
+    padding-top: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: -1px;
+}
+.row-offcanvas .sidebar-offcanvas {
+    transition: all .25s ease-out;
+    transform: translate3d(0, 0, 0);
+}
+#sidebar{
+	padding: 0;
+}
+.sidebar-offcanvas {
+    position: fixed;
+    background: white;
+    top: 60px;
+    z-index: 99999;
+    width: 80%;
+    overflow: scroll;
+    display: block;
+    height: 100%;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -80%;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -80%;
+  }
+
+  .row-offcanvas.active .sidebar-offcanvas {
+    left: 0;
+    border-right: 1px solid #5A6772;
+  }
+
+  .row-offcanvas.active:after {
+    content: " ";
+    position: fixed;
+    top: 59px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    background: #000;
+    z-index: 9998;
+  }
+@media screen and (min-width: 768px) {
+	.navbar-toggle {
+	    display: block !important;
+	    padding-top: 6.0rem !important;
+	}
+	.navbar--small .navbar-toggle p{
+	    display: none !important;
+	}
+	.navbar-toggle p{
+	    display: block !important;
+	}
+	.sidebar-offcanvas {
+    	width: 25%;
+	}
+	.row-offcanvas-right
+	.sidebar-offcanvas {
+	  	right: -25%;
+	}
+	.row-offcanvas-left
+	.sidebar-offcanvas {
+	    left: -25%;
+	}
+	.offcanvas--large.row-offcanvas.active:after,
+	.offcanvas--large .sidebar-offcanvas {
+	    top: 193px;
+	}
+}
+
 /* end override*/
 
 /* END HEADER */
-
-/* MAIN */
-/* override agid css */
-#main {
-    min-height: 0 !important;
-}
-#main img {
-    margin: 20px auto;
-}
-article{
-    padding-left: 15px;
-    padding-right: 15px;
-}
-article table, article pre, article div, article .lg-callout, article p, article ul, article ol, 
-article h1, article h2, article h3, article h4, article h5, article h6 {
-    max-width: none;
-}
-article.first .box_text.box_article{
-    padding-left: 15px;
-    padding-right: 15px;
-}
-@media (min-width: 768px) { 
-    article.first .box_text.box_article{
-        padding-left: auto;
-        padding-right: auto;
-    }
-}
-.thumb_container{
-    margin-top: 27px;
-}
-.thumb_container img{
-    max-height: 230px;
-    margin: 0 auto;
-    display: block;
-}
-/* end override*/
-/* END MAIN */
-
-/* POST */
-.share_buttons_container {
-    margin-top: 30px;
-    font-size: 32px;
-}
-@media (min-width: 768px) { 
-    .share_buttons_container{
-        text-align: right;
-    }
-}
-.share_buttons_container a{
-    text-decoration: none !important;
-}
-.share_buttons_container span{
-    color: white;
-    background: #0066cc;
-    width: 50px;
-    height: 50px;
-    padding-top: 10px;
-    text-align: center;
-}
-.share_buttons_container > div > span{
-    background: #f2f2f2;
-    color: #0066cc;
-}
-/* END POST */
     
 /* FOOTER */
 /* override agid css */
@@ -134,7 +161,7 @@ footer .footer__links {
 footer {
     background-color: #30373d;
     color: #ffffff;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .logo_wrapper {
     width: 74px;

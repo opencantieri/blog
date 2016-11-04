@@ -1,0 +1,36 @@
+/* MAIN */
+/* override agid css */
+#main {
+    min-height: 0 !important;
+}
+#main img {
+    margin: 20px auto;
+}
+article{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+article table, article pre, article div, article .lg-callout, article p, article ul, article ol, 
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    max-width: none;
+}
+article.first .box_text.box_article{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) { 
+    article.first .box_text.box_article{
+        padding-left: auto;
+        padding-right: auto;
+    }
+}
+.thumb_container{
+    margin-top: 27px;
+}
+.thumb_container img{
+    max-height: 230px;
+    margin: 0 auto;
+    display: block;
+}
+/* end override*/
+/* END MAIN */

@@ -10,53 +10,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-exec"
 
   grunt.initConfig
-    copy:
-      jquery:
-        files: [{
-          expand: true
-          cwd: "bower_components/jquery/dist/"
-          src: "jquery.min.js"
-          dest: "vendor/js/"
-        }]
-      bootstrap:
-        files: [{
-          expand: true
-          cwd: "bower_components/bootstrap/dist/css/"
-          src: "bootstrap.min.css"
-          dest: "vendor/css/"
-        },
-        {
-          expand: true
-          cwd: "bower_components/bootstrap/dist/js/"
-          src: "bootstrap.min.js"
-          dest: "vendor/js/"
-        }]
-      fontawesome:
-        files: [{
-          expand: true
-          cwd: "bower_components/font-awesome/css/"
-          src: "font-awesome.min.css"
-          dest: "vendor/css/"
-        },
-        {
-          expand: true
-          cwd: "bower_components/font-awesome/fonts/"
-          src: "*"
-          dest: "vendor/fonts/"
-        }]
-      prism:
-        files: [{
-          expand: true
-          cwd: "bower_components/prism/themes/"
-          src: "prism.css"
-          dest: "vendor/css/"
-        },
-        {
-          expand: true
-          cwd: "bower_components/prism/"
-          src: "prism.js"
-          dest: "vendor/js/"
-        }]
 
     exec:
       jekyll:
@@ -89,7 +42,6 @@ module.exports = (grunt) ->
           livereload: true
 
   grunt.registerTask "build", [
-    "copy"
     "exec:jekyll"
   ]
 

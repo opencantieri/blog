@@ -113,21 +113,21 @@
 
   /* Cookie law */
 
-  /*$(document).ready(function() {
-    $.cookieBar({
-      fixed: true,
-      bottom: true,
-      message: $('.cookie-message').text(),
-      acceptButton: true,
-      acceptText: 'Ok',
-      policyButton: true,
-      policyText: 'Privacy Policy',
-      policyURL: '/linee-guida/privacy-policy',
-      acceptOnContinue: true,
-      acceptOnScroll: 200,
-      acceptFunction: location.reload
-    });
-  });*/
+//  $(document).ready(function() {
+//    $.cookieBar({
+//      fixed: true,
+//      bottom: true,
+//      message: $('.cookie-message').text(),
+//      acceptButton: true,
+//      acceptText: 'Ok',
+//      policyButton: true,
+//      policyText: 'Privacy Policy',
+//      policyURL: '/linee-guida/privacy-policy',
+//      acceptOnContinue: true,
+//      acceptOnScroll: 200,
+//      acceptFunction: location.reload
+//    });
+//  });
 
   /* Scripts Functions */
 
@@ -170,7 +170,7 @@
 
   /* Next / prev links */
 
-  /*$(function() {
+  $(function() {
     var sibl = {},
       cur = null;
     $('.navmenu li').each(function(i, el) {
@@ -212,7 +212,7 @@
         $links.append('<div class="col-md-6"></div>');
       }
     }
-  });*/
+  });
 
   /* Scroll to top button */
 
@@ -232,10 +232,12 @@
     if (scroll > 80) {
       $('.scrollto_top').removeClass('sr-only');
       $('.navbar').addClass('navbar--small');
+      $('.row-offcanvas').removeClass('offcanvas--large');
       $('.nav-banner').addClass('nav-banner--small');
     } else {
       $('.nav-banner').removeClass('nav-banner--small');
       $('.navbar').removeClass('navbar--small');
+      $('.row-offcanvas').addClass('offcanvas--large');
       $('.scrollto_top').addClass('sr-only');
     }
   });
@@ -305,3 +307,5 @@
   });
 
 })(jQuery);
+
+//# sourceMappingURL=scripts.min.js.map
